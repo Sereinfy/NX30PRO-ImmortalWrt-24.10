@@ -4,11 +4,10 @@ Auto build OpenWrt firmware for NX30PRO via GitHub Actions
 
 | Default ip | Default user | Default password |
 | --- | --- | --- | 
-| 192.168.10.1 | root | - |
+| 192.168.10.1 | root | none |
 
 ## Main Functions
 
-- ipv6 support
 - mosdns
 - uPnP
 
