@@ -8,7 +8,6 @@ Auto build OpenWrt firmware for NX30PRO via GitHub Actions
 
 ## Main Functions
 
+- nikki
 - mosdns
 - uPnP
-
-Change Repo to https://github.com/padavanonly/immortalwrt-mt798x-24.10
