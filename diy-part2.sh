@@ -15,13 +15,21 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci2/bin/config_genera
 
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
-# mosdns
+## golang 为 1.24.x
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+
 rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/v2ray-geodata
 rm -rf package/feeds/packages/mosdns
+
+rm -rf package/feeds/luci/luci-app-mosdns
+rm -rf feeds/luci/applications/luci-app-mosdns
+
+rm -rf feeds/packages/net/v2ray-geodata
 rm -rf package/feeds/packages/v2ray-geodata
+
+rm -rf package/feeds/luci/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-openclash
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-# 删除openclash 看看会不会变好
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/luci-app-openclash
