@@ -34,4 +34,6 @@ rm -rf package/feeds/packages/luci-app-openclash
 rm -rf feeds/luci/applications/openclash
 rm -rf feeds/luci/applications/luci-app-openclash
 
+rm -rf ./feeds/luci/applications/luci-app-openclash
+
 git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
