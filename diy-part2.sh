@@ -10,8 +10,8 @@
 
 # Modify default IP
 # 默认网关 ip 地址修改
-sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci2/bin/config_generate
 
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 # mosdns
