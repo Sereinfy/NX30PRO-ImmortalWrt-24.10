@@ -8,6 +8,6 @@ Auto build OpenWrt firmware for NX30PRO via GitHub Actions
 
 ## Main Functions
 
-- nikki
+- openclash
 - mosdns
 - uPnP
