@@ -11,10 +11,10 @@
 # Modify default IP
 
 # 默认网关 ip 地址修改
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/luci2/bin/config_generate
 
-sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+#sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 ## golang 为 1.24.x
 rm -rf feeds/packages/lang/golang
@@ -35,12 +35,12 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/Sereinfy/v2ray-geodata package/v2ray-geodata
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/luci-app-openclash
 
-rm -rf feeds/luci/theme
-rm -rf package/feeds/luci
 git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+rm -rf feeds/luci/theme/*
+cp -af package/luci-theme-argon/*  feeds/luci/theme/
 
 ##取消bootstrap为默认主题
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
+#sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 
