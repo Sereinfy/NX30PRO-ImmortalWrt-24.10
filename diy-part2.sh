@@ -36,8 +36,8 @@ git clone https://github.com/Sereinfy/v2ray-geodata package/v2ray-geodata
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/luci-app-openclash
 
 git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-rm -rf feeds/luci/theme/*
-cp -af package/luci-theme-argon/*  feeds/luci/theme/
+rm -rf feeds/luci/theme/luci-theme-argon/*
+cp -af package/luci-theme-argon/*  feeds/luci/theme/luci-theme-argon/
 
 ##取消bootstrap为默认主题
 #sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
